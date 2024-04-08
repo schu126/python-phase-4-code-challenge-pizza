@@ -45,7 +45,7 @@ def get_restaurant(id):
         if not restaurant:
             return {"error": "Restaurant not found"}, 400
         db.session.delete(restaurant)
-        db.session.commit
+        db.session.commit()
         return {}, 204
     
 @app.route('/pizzas')
